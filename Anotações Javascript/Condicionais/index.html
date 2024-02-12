@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+</head>
+<body>
+    <label>Sua idade:</label><br>
+    <input type="text" id="mytxt"><br><br>
+    <button type="submit" id="meusb">Enviar</button>
+    <p id="res"></p>
+
+    <script>
+        const meuTxt = document.getElementById("mytxt");
+        const meusb = document.getElementById("meusb");
+        const res = document.getElementById("res");
+        let idade;
+    
+        meusb.onclick = function(){
+            idade = meuTxt.value; //Valor da caixa de texto
+            idade = Number(idade); //Transforma esse valor em número
+
+            if(idade >= 100){
+                res.textContent = `Centenário`;
+            }
+            else if(idade == 0){
+                res.textContent = `Recem nascido`;
+            }
+            else if(idade >= 18){
+                res.textContent = `Adulto`;
+            }
+            else if(idade < 0){
+                res.textContent = `Não nasceu ainda`;
+            }
+            else {
+                res.textContent = `Chegue até os 18 anos`;
+            }
+        }
+    
+        
+    
+        /* 
+           > Maior que
+           < Menor que
+           >= Maior ou igual a 
+           <= Menor ou igual a 
+           == igual a 
+           === mesmo tipo e dado 
+           != diferente de */
+    
+    
+    </script>
+</body>
+</html>
+
+

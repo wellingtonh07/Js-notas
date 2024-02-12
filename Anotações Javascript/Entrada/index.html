@@ -1,0 +1,21 @@
+<h1>Bem vindo</h1>
+<label>Nome:</label>
+<input type="text" id="texto">
+<button id="enviar">Enviar</button>
+
+<script>
+    //Maneira fácil
+
+    /* let nome = prompt("Qual é seu nome?");
+
+    console.log(nome); */
+
+    //Maneira profissional
+
+    let nome;
+
+    document.getElementById("enviar").onclick = function() {
+        nome = document.getElementById("texto").value;
+        console.log(nome);
+    }
+</script>
